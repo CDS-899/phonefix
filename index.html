@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhoneFix - Ремонт мобільних телефонів</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="header" id="header">
+        <div class="container header-container">
+            <a href="#" class="logo">PhoneFix</a>
+            
+            <div class="burger-menu" id="burgerMenu">
+                <span></span><span></span><span></span>
+            </div>
+
+            <nav class="nav" id="navMenu">
+                <ul class="nav-list">
+                    <li><a href="#hero" class="nav-link">Головна</a></li>
+                    <li><a href="#services" class="nav-link">Послуги</a></li>
+                    <li><a href="#features" class="nav-link">Переваги</a></li>
+                    <li><a href="#location" class="nav-link">Контакти</a></li>
+                </ul>
+                <a href="tel:+380123456789" class="btn btn-primary header-btn mobile-btn">
+                    <img src="img/icons/phone.svg" class="btn-icon" alt=""> +380 12 345 67 89
+                </a>
+            </nav>
+            
+            <a href="tel:+380123456789" class="btn btn-primary header-btn desktop-btn">
+                <img src="img/icons/phone.svg" class="btn-icon" alt=""> +380 12 345 67 89
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="hero">
+            <div class="container hero-container">
+                <div class="hero-content animate-on-scroll">
+                    <h1 class="hero-title">Професійний ремонт мобільних телефонів</h1>
+                    <p class="hero-text">Швидкий та якісний ремонт смартфонів усіх марок. Оригінальні запчастини, досвідчені майстри та гарантія на всі види робіт.</p>
+                    
+                    <ul class="hero-features">
+                        <li><img src="img/icons/clock.svg" alt=""> Ремонт за 30 хв</li>
+                        <li><img src="img/icons/shield.svg" alt=""> Гарантія до 6 місяців</li>
+                        <li><img src="img/icons/tools.svg" alt=""> Оригінальні деталі</li>
+                    </ul>
+
+                    <div class="hero-buttons">
+                        <a href="#contacts" class="btn btn-primary scroll-link">Замовити ремонт</a>
+                        <a href="#services" class="btn btn-outline scroll-link">Дізнатись ціну</a>
+                    </div>
+                </div>
+                <div class="hero-image animate-on-scroll">
+                    <img src="img/hero.jpg" alt="Ремонт телефону">
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="services">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    <h2>Наші послуги та ціни</h2>
+                    <p>Виконуємо всі види ремонту мобільних телефонів. Натисніть на послугу для деталей.</p>
+                </div>
+
+                <div class="services-grid">
+                    <div class="service-card animate-on-scroll" data-id="screen"><div class="icon-box"><img src="img/icons/screen.svg" alt=""></div><h3>Заміна екрану</h3><p>Заміна розбитого або пошкодженого екрану на оригінальний</p><div class="service-meta"><span class="price">1200-6000 грн</span><div class="meta-right"><span class="time"><img src="img/icons/clock.svg" alt=""> 30-60 хв</span><span class="warranty"><img src="img/icons/shield.svg" alt=""> 3 міс</span></div></div></div>
+                    <div class="service-card animate-on-scroll" data-id="battery"><div class="icon-box"><img src="img/icons/battery.svg" alt=""></div><h3>Заміна акумулятора</h3><p>Установка нової батареї для продовження терміну служби</p><div class="service-meta"><span class="price">600-1800 грн</span><div class="meta-right"><span class="time"><img src="img/icons/clock.svg" alt=""> 20-30 хв</span><span class="warranty"><img src="img/icons/shield.svg" alt=""> 6 міс</span></div></div></div>
+                    <div class="service-card animate-on-scroll" data-id="water"><div class="icon-box"><img src="img/icons/water.svg" alt=""></div><h3>Ремонт після води</h3><p>Відновлення телефону після попадання вологи</p><div class="service-meta"><span class="price">від 1000 грн</span><div class="meta-right"><span class="time"><img src="img/icons/clock.svg" alt=""> 1-3 дні</span><span class="warranty"><img src="img/icons/shield.svg" alt=""> 1 міс</span></div></div></div>
+                    <div class="service-card animate-on-scroll" data-id="speaker"><div class="icon-box"><img src="img/icons/speaker.svg" alt=""></div><h3>Ремонт динаміків</h3><p>Заміна або ремонт розмовного та мультимедійного динаміка</p><div class="service-meta"><span class="price">800-1500 грн</span><div class="meta-right"><span class="time"><img src="img/icons/clock.svg" alt=""> 30-45 хв</span><span class="warranty"><img src="img/icons/shield.svg" alt=""> 3 міс</span></div></div></div>
+                    <div class="service-card animate-on-scroll" data-id="camera"><div class="icon-box"><img src="img/icons/camera.svg" alt=""></div><h3>Ремонт камери</h3><p>Заміна або ремонт основної та фронтальної камери</p><div class="service-meta"><span class="price">800-3500 грн</span><div class="meta-right"><span class="time"><img src="img/icons/clock.svg" alt=""> 40-60 хв</span><span class="warranty"><img src="img/icons/shield.svg" alt=""> 3 міс</span></div></div></div>
+                    <div class="service-card animate-on-scroll" data-id="board"><div class="icon-box"><img src="img/icons/board.svg" alt=""></div><h3>Ремонт плати</h3><p>Діагностика та ремонт материнської плати</p><div class="service-meta"><span class="price">від 1500 грн</span><div class="meta-right"><span class="time"><img src="img/icons/clock.svg" alt=""> 2-5 дні</span><span class="warranty"><img src="img/icons/shield.svg" alt=""> 1 міс</span></div></div></div>
+                    <div class="service-card animate-on-scroll" data-id="charging"><div class="icon-box"><img src="img/icons/charging.svg" alt=""></div><h3>Заміна роз'єму зарядки</h3><p>Ремонт або заміна порту зарядки та синхронізації</p><div class="service-meta"><span class="price">500-1500 грн</span><div class="meta-right"><span class="time"><img src="img/icons/clock.svg" alt=""> 30-45 хв</span><span class="warranty"><img src="img/icons/shield.svg" alt=""> 3 міс</span></div></div></div>
+                    <div class="service-card animate-on-scroll" data-id="wifi"><div class="icon-box"><img src="img/icons/wifi.svg" alt=""></div><h3>Ремонт Wi-Fi/Bluetooth</h3><p>Відновлення бездротових модулів зв'язку</p><div class="service-meta"><span class="price">1000-2000 грн</span><div class="meta-right"><span class="time"><img src="img/icons/clock.svg" alt=""> 1-2 дні</span><span class="warranty"><img src="img/icons/shield.svg" alt=""> 3 міс</span></div></div></div>
+                    <div class="service-card animate-on-scroll" data-id="mic"><div class="icon-box"><img src="img/icons/mic.svg" alt=""></div><h3>Ремонт мікрофону</h3><p>Заміна або чистка мікрофону для чіткого звуку</p><div class="service-meta"><span class="price">700-1200 грн</span><div class="meta-right"><span class="time"><img src="img/icons/clock.svg" alt=""> 30-45 хв</span><span class="warranty"><img src="img/icons/shield.svg" alt=""> 3 міс</span></div></div></div>
+                    <div class="service-card animate-on-scroll" data-id="sensor"><div class="icon-box"><img src="img/icons/sensor.svg" alt=""></div><h3>Ремонт сенсорів</h3><p>Відновлення Touch ID, Face ID та інших сенсорів</p><div class="service-meta"><span class="price">1500-3000 грн</span><div class="meta-right"><span class="time"><img src="img/icons/clock.svg" alt=""> 1-2 дні</span><span class="warranty"><img src="img/icons/shield.svg" alt=""> 3 міс</span></div></div></div>
+                    <div class="service-card animate-on-scroll" data-id="glass"><div class="icon-box"><img src="img/icons/glass.svg" alt=""></div><h3>Захист екрану</h3><p>Встановлення захисного скла або плівки</p><div class="service-meta"><span class="price">150-500 грн</span><div class="meta-right"><span class="time"><img src="img/icons/clock.svg" alt=""> 10-15 хв</span><span class="warranty"><img src="img/icons/shield.svg" alt=""> 1 міс</span></div></div></div>
+                    <div class="service-card animate-on-scroll" data-id="soft"><div class="icon-box"><img src="img/icons/soft.svg" alt=""></div><h3>Програмне обслуговування</h3><p>Оновлення ПЗ, видалення вірусів, налаштування</p><div class="service-meta"><span class="price">300-800 грн</span><div class="meta-right"><span class="time"><img src="img/icons/clock.svg" alt=""> 30-60 хв</span><span class="warranty"><img src="img/icons/shield.svg" alt=""> 1 міс</span></div></div></div>
+                </div>
+
+                <div class="warranty-row animate-on-scroll">
+                    <div class="warranty-card green"><div class="w-icon"><img src="img/icons/check.svg" alt=""></div><div class="w-text"><h4>Офіційна гарантія</h4><p>На всі роботи та запчастини надається офіційна гарантія</p></div></div>
+                    <div class="warranty-card blue"><div class="w-icon"><img src="img/icons/shield.svg" alt=""></div><div class="w-text"><h4>Офіційна гарантія</h4><p>На всі роботи та запчастини надається офіційна гарантія</p></div></div>
+                    <div class="warranty-card purple"><div class="w-icon"><img src="img/icons/check.svg" alt=""></div><div class="w-text"><h4>Офіційна гарантія</h4><p>На всі роботи та запчастини надається офіційна гарантія</p></div></div>
+                </div>
+
+                <div class="info-alert animate-on-scroll">
+                    <img src="img/icons/warning.svg" class="alert-icon" alt="">
+                    <div class="alert-content">
+                        <p><strong>Зверніть увагу:</strong> Вказані діапазони цін є орієнтовними.</p>
+                        <p>Точну вартість повідомить майстер після безкоштовної діагностики.</p>
+                    </div>
+                </div>
+                
+                <div class="center-btn animate-on-scroll">
+                    <a href="#contacts" class="btn btn-primary scroll-link">Отримати Консультацію</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="features">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    <h2>Чому обирають нас</h2>
+                    <p>Ми піклуємось про кожного клієнта і гарантуємо високу якість наших послуг</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card animate-on-scroll"><div class="icon-box"><img src="img/icons/clock.svg" alt=""></div><h3>Швидкість</h3><p>Більшість ремонтів виконуємо за 30-60 хвилин</p></div>
+                    <div class="feature-card animate-on-scroll"><div class="icon-box"><img src="img/icons/shield.svg" alt=""></div><h3>Гарантія</h3><p>6 місяців гарантії на всі види робіт</p></div>
+                    <div class="feature-card animate-on-scroll"><div class="icon-box"><img src="img/icons/tools.svg" alt=""></div><h3>Якість</h3><p>Використовуємо тільки оригінальні запчастини</p></div>
+                    <div class="feature-card animate-on-scroll"><div class="icon-box"><img src="img/icons/medal.svg" alt=""></div><h3>Досвід</h3><p>Понад 5 років на ринку ремонту електроніки</p></div>
+                    <div class="feature-card animate-on-scroll"><div class="icon-box"><img src="img/icons/calendar.svg" alt=""></div><h3>Графік роботи</h3><p>Працюємо щодня з 9:00 до 21:00 без вихідних</p></div>
+                    <div class="feature-card animate-on-scroll"><div class="icon-box"><img src="img/icons/headset.svg" alt=""></div><h3>Підтримка</h3><p>Консультації та допомога після ремонту</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="location" class="location">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    <h2>Наше розташування</h2>
+                    <p>Ми знаходимося в центрі міста для вашої зручності</p>
+                </div>
+                <div class="location-wrapper animate-on-scroll">
+                    <div class="location-info">
+                        <div class="info-item"><div class="icon"><img src="img/icons/location.svg" alt=""></div><div><h4>Адреса</h4><p>вул. Хрещатик, 10<br>Київ, 01001, Україна</p></div></div>
+                        <div class="info-item"><div class="icon"><img src="img/icons/clock.svg" alt=""></div><div><h4>Години роботи</h4><p>Пн - Пт: 9:00 - 20:00<br>Сб - Нд: 10:00 - 18:00</p></div></div>
+                        <div class="info-item"><div class="icon"><img src="img/icons/phone.svg" alt=""></div><div><h4>Телефон</h4><p>+38 (050) 123-45-67</p></div></div>
+                        <div class="info-item"><div class="icon"><img src="img/icons/email.svg" alt=""></div><div><h4>Email</h4><p>info@phonefix.ua</p></div></div>
+                    </div>
+                    <div class="location-map" id="map"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contacts" class="footer">
+        <div class="container footer-top">
+            <div class="footer-contacts animate-on-scroll">
+                <h3>Наші контакти</h3>
+                <p>Зв'яжіться з нами зручним для вас способом</p>
+                <div class="contact-list">
+                    <div class="c-item"><img src="img/icons/location.svg" class="sm-icon" alt=""> м. Київ, вул. Хрещатик, 22</div>
+                    <div class="c-item"><img src="img/icons/phone.svg" class="sm-icon" alt=""> +380 12 345 67 89</div>
+                    <div class="c-item"><img src="img/icons/email.svg" class="sm-icon" alt=""> info@phonefix.ua</div>
+                    <div class="c-item"><img src="img/icons/clock.svg" class="sm-icon" alt=""> Пн-Нд: 9:00 - 21:00</div>
+                </div>
+            </div>
+            
+            <div class="footer-form animate-on-scroll">
+                <h3>Замовити Дзвінок</h3>
+                <form action="#" id="contactForm">
+                    <input type="text" placeholder="Ваше Ім'я" required>
+                    <input type="tel" id="phoneInput" placeholder="+380 XX XXX XX XX" required>
+                    <textarea placeholder="Опишіть Проблему" rows="4"></textarea>
+                    <button type="submit" class="btn btn-primary full-width">Відправити Заявку</button>
+                    <p class="form-note">Ми зателефонуємо вам протягом 5 хвилин</p>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container bottom-content">
+                <div class="copyright">
+                    <h4>PhoneFix</h4>
+                    <p>Професійний ремонт мобільних телефонів у Києві. Якість, швидкість, гарантія.</p>
+                </div>
+                <div class="footer-nav">
+                   <h4>Послуги</h4>
+                   <ul>
+                       <li><a href="#services" class="scroll-link">Ремонт</a></li>
+                       <li><a href="#contacts" class="scroll-link">Консультація</a></li>
+                       <li><a href="#contacts" class="scroll-link">Заявка</a></li>
+                       <li><a href="#location" class="scroll-link">Розташування</a></li>
+                   </ul>
+                </div>
+                 <div class="footer-nav">
+                   <h4>Контакти</h4>
+                   <ul>
+                       <li>м. Київ, вул. Хрещатик, 22</li>
+                       <li>+380 12 345 67 89</li>
+                       <li>info@phonefix.ua</li>
+                       <li>Пн-Нд: 9:00 - 21:00</li>
+                   </ul>
+                </div>
+            </div>
+            <div class="legal">
+                <p>© 2025 PhoneFix Pro. Всі права захищені.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="serviceModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-header">
+                <div id="modalIcon" class="modal-icon"></div>
+                <h3 id="modalTitle">Назва послуги</h3>
+            </div>
+            <div class="modal-body">
+                <p id="modalDesc">Опис послуги...</p>
+                <h4>Орієнтовна вартість для популярних моделей:</h4>
+                <table class="price-table">
+                    <thead><tr><th>Модель</th><th>Ціна</th></tr></thead>
+                    <tbody id="modalPrices"></tbody>
+                </table>
+                <div class="modal-actions">
+                    <a href="#contacts" class="btn btn-primary" onclick="document.getElementById('serviceModal').style.display='none'">Замовити</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
